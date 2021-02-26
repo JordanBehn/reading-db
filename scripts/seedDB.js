@@ -3,12 +3,12 @@ const db = require("../models");
 
 // This file empties the Books collection and inserts the books below
 if (process.env.NODE_ENV === "production") {
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  });
+  mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
+});
 } else {
   mongoose.connect("mongodb://localhost/reactreadinglist", {
     useNewUrlParser: true,
